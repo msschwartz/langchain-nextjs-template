@@ -7,6 +7,7 @@ The sample implements a tool calling agent, which outputs an interactive UI elem
 We introduce two utilties which wraps the AI SDK to make it easier to yield React elements inside runnables and tool calls: [`createRunnableUI`](./utils/server.tsx#L89) and [`streamRunnableUI`](./utils/server.tsx#L26).
 
 - The `streamRunnableUI` executes the provided Runnable with `streamEvents` method and sends every `stream` event to the client via the React Server Components stream.
+
 - The `createRunnableUI` wraps the `createStreamableUI` function from AI SDK to properly hook into the Runnable event stream.
 
 The usage is then as follows:
